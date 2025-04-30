@@ -61,3 +61,9 @@ def user_logout(request):
 
 def home_view(request):
     return render(request, 'home.html')
+
+
+
+def user_list_view(request):
+    users = User.objects.all()
+    return render(request, 'user_list.html', {'users': users})
